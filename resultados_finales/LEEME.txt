@@ -1,0 +1,10 @@
+Corrida final en la computadora de Emilio (10 nov. 2026)
+Intel Core i5-1235U, 8 GB, Windows 11, Python 3.11.9, NumPy 2.1.3, SciPy 1.15.3
+Código con el arreglo de robustez del problema de parámetros.
+
+costo_escala, mancha: exponentes factorización 0.94, dato directa 0.97, mapeo 0.58, dato conforme 1.06
+  1024 px: factorización 311.8 ms, dato directa 28.63 ms, mapeo 34.78 s, dato conforme 304.5 ms
+costo_escala, raya: exponentes 0.81, 0.80, 0.79, 0.94
+  1024 px: factorización 32.9 ms, dato directa 6.69 ms, mapeo 17.52 s, dato conforme 165.8 ms
+comparar_rutas, mancha: Spearman armónico 0.21, PM 0.35, TV 0.39; raya L=16 sin mapeo
+banco: manchas 0/29 sin mapeo, L=12 1/5, L=14 0/5, texto 25/45; dato conf/dir entre 10 y 34 veces

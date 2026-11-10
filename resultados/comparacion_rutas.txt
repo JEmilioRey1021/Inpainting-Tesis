@@ -1,0 +1,17 @@
+máscara         píx | PSNR dir PSNR conf  dif max | factoriz.    mapeo | dato dir dato conf | notas
+mancha         3360 |    12.10     12.18  1.2e-01 |     7.9ms    3.22s |   1.03ms    8.11ms | 
+tres manchas   1928 |    17.86     17.84  1.4e-01 |     4.5ms    4.09s |   0.73ms   13.71ms | 
+raya L=8        235 |    23.52     22.82  3.6e-02 |     1.3ms    1.46s |   0.23ms    6.39ms | 
+raya L=16       475 |    25.85     25.85  0.0e+00 |     1.4ms    0.36s |   0.25ms    0.39ms | 1 componente(s) sin mapeo, ruta directa
+
+Modelos no invariantes en la máscara 'mancha'
+   modelo        dif media  PSNR dir PSNR disco   Spearman(|dif|, |psi"/psi'|)
+   armónico         0.0120     12.10      12.13                           0.21
+   Perona–Malik     0.0375     10.24      10.13                           0.35
+   TV               0.0319     10.96      10.64                           0.38
+
+Figura guardada en resultados/comparacion_mancha.png
+
+real	1m53.683s
+user	1m48.479s
+sys	0m3.973s

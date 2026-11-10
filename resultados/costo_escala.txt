@@ -1,0 +1,20 @@
+
+Máscara: mancha
+    N   píx D | factoriz.  dato dir |    mapeo dato conf | vértices PSNR dir PSNR conf
+  128     838 |     2.4ms    0.31ms |    1.33s     2.2ms |       17    12.40     12.32
+  256    3361 |     7.3ms    1.22ms |    3.34s     9.8ms |       27    11.93     11.94
+  512   13441 |    39.3ms    4.70ms |    8.46s    37.5ms |       39    11.67     11.72
+ 1024   53785 |   272.0ms   28.97ms |   27.18s   283.9ms |       63    11.74     11.71
+exponentes p (tiempo ~ píxeles^p): factorización 1.15, dato directa 1.08, mapeo 0.72, dato conforme 1.15
+
+Máscara: raya
+    N   píx D | factoriz.  dato dir |    mapeo dato conf | vértices PSNR dir PSNR conf
+  128     155 |     0.8ms    0.13ms |    0.62s     3.1ms |        4    20.93     20.47
+  256     610 |     1.9ms    0.35ms |    1.49s    10.2ms |        4    20.32     20.10
+  512    2460 |     8.5ms    1.10ms |    4.76s    41.0ms |        4    20.31     20.21
+ 1024   10045 |    31.9ms    4.98ms |   15.08s   145.5ms |        4    20.47     20.42
+exponentes p (tiempo ~ píxeles^p): factorización 0.91, dato directa 0.87, mapeo 0.77, dato conforme 0.93
+
+real	1m6.439s
+user	1m4.634s
+sys	0m1.169s

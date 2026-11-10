@@ -1,0 +1,30 @@
+camarógrafo...
+/home/claude/codigo-tesis/inpainting/sc.py:220: RuntimeWarning: invalid value encountered in scalar divide
+  r = [np.log(np.abs(I[k]) / np.abs(I[0])) - np.log(lz[k] / lz[0])
+/home/claude/codigo-tesis/inpainting/sc.py:222: RuntimeWarning: divide by zero encountered in scalar divide
+  C = (self.z[1] - self.z[0]) / I[0]
+/home/claude/codigo-tesis/inpainting/sc.py:155: RuntimeWarning: invalid value encountered in matmul
+  total[idx] += half * (self._f_trozos(zeta, None, w) @ self.wl)
+/home/claude/codigo-tesis/inpainting/sc.py:220: RuntimeWarning: divide by zero encountered in log
+  r = [np.log(np.abs(I[k]) / np.abs(I[0])) - np.log(lz[k] / lz[0])
+astronauta...
+/home/claude/codigo-tesis/inpainting/sc.py:222: RuntimeWarning: invalid value encountered in scalar divide
+  C = (self.z[1] - self.z[0]) / I[0]
+café...
+luna...
+gato...
+Promedios sobre las 5 imágenes
+familia    param | arm dir arm conf  dif arm | TV dir TV disco  dif TV |  mapeo    fact | dato conf/dir | comp. sin mapeo
+manchas          |   22.16    21.74   0.0064 |  23.42    23.64  0.0071 |   2.7s   2.6ms |          26.3 |      0 de 29    
+rayas          2 |   32.57    30.93   0.0089 |  33.12    32.58  0.0132 |   0.3s   1.2ms |           8.9 |      0 de 5     
+rayas          4 |   31.48    30.03   0.0107 |  31.54    30.85  0.0220 |   0.5s   1.0ms |           9.2 |      0 de 5     
+rayas          6 |   29.91    28.63   0.0130 |  30.29    29.36  0.0160 |   0.7s   1.1ms |           8.5 |      0 de 5     
+rayas          8 |   29.09    27.77   0.0122 |  29.61    27.37  0.0178 |   1.3s   1.1ms |          11.2 |      0 de 5     
+rayas         10 |   26.99    25.69   0.0135 |  27.32    25.47  0.0153 |   2.2s   1.0ms |          13.1 |      0 de 5     
+rayas         12 |   26.75    25.33   0.0112 |  27.33    25.73  0.0119 |   2.4s   1.0ms |          13.3 |      1 de 5     
+rayas         14 |   26.53    24.74   0.0123 |  27.57    25.91  0.0122 |   4.8s   1.1ms |          16.1 |      1 de 5     
+texto            |   27.04    27.02   0.0002 |  26.40    26.27  0.0010 |  37.9s   2.8ms |          10.8 |     35 de 45    
+
+real	4m29.714s
+user	4m26.648s
+sys	0m0.216s

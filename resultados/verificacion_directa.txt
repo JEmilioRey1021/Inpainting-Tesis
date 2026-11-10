@@ -1,0 +1,65 @@
+
+========================================================================
+1. La matriz A es simétrica y definida positiva
+========================================================================
+   max |A - A^T| = 0.0e+00    menor valor propio = 6.2406
+   OK
+
+========================================================================
+2. Orden de convergencia del armónico (solución exacta e^x cos y)
+========================================================================
+       N         h    error max   orden
+      32   0.06250    7.355e-05 
+      64   0.03125    1.791e-05    2.04
+     128   0.01562    4.381e-06    2.03
+     256   0.00781    1.082e-06    2.02
+     512   0.00391    2.689e-07    2.01
+   orden ajustado = 2.02 (se espera 2)
+   OK
+
+========================================================================
+3. Principio del máximo discreto con dato aleatorio
+========================================================================
+   dato en el borde en [-0.9863, 0.9991]
+   solución en D   en [-0.6714, 0.6372]
+   OK
+
+========================================================================
+4. El calor converge al armónico cuando T crece
+========================================================================
+         T    max |u_T - u_arm|
+      0.01            6.526e-01
+      0.05            2.134e-01
+      0.10            5.115e-02
+      0.20            3.020e-03
+      0.40            1.472e-05
+   tasa observada 27.1   valores propios discretos lambda_1 = 11.3, lambda_2 = 28.7
+   OK
+
+========================================================================
+5. Una rampa lineal es estacionaria para Perona–Malik y TV
+========================================================================
+   Perona–Malik   partiendo de la rampa, max cambio = 3.6e-15
+   TV (flujo)     partiendo de la rampa, max cambio = 1.2e-15
+   Perona–Malik   partiendo de una constante,  error final = 1.3e-15
+   TV estac.      partiendo de una constante,  error final = 1.5e-05
+   OK
+
+========================================================================
+6. Escalón vertical. TV lo conserva y el armónico lo difumina
+========================================================================
+   armónico      error medio = 0.195   error max = 0.478
+   Perona–Malik  error medio = 0.176   error max = 0.524
+   TV            error medio = 0.009   error max = 0.133
+   OK
+
+========================================================================
+7. Amortización de la ruta directa (imagen de 512 x 512)
+========================================================================
+   píxeles en la máscara      23650
+   factorización (una vez)       62.03 ms
+   resolución por dato            7.11 ms (mediana de 10)
+
+========================================================================
+Resumen: 7 de 7 pruebas OK
+========================================================================
