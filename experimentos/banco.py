@@ -104,8 +104,14 @@ def caso(img_nombre, ref, familia, param, D):
 
 
 def leer_csv():
-    with open(os.path.join(SALIDA, "banco.csv")) as f:
-        filas = list(csv.DictReader(f))
+    ruta = os.path.join(SALIDA, "banco.csv")
+    try:
+        with open(ruta, encoding="utf-8") as f:
+            filas = list(csv.DictReader(f))
+    except UnicodeDecodeError:
+        # archivos escritos por versiones anteriores en Windows (cp1252)
+        with open(ruta, encoding="cp1252") as f:
+            filas = list(csv.DictReader(f))
     for r in filas:
         for k, v in r.items():
             if k in ("imagen", "familia"):
@@ -125,7 +131,7 @@ def correr():
         for L in [2, 4, 6, 8, 10, 12, 14]:
             filas.append(caso(nom, ref, "rayas", L, raya(L, 100 + i)))
         filas.append(caso(nom, ref, "texto", "", texto()))
-    with open(os.path.join(SALIDA, "banco.csv"), "w", newline="") as f:
+    with open(os.path.join(SALIDA, "banco.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(filas[0].keys()))
         w.writeheader(); w.writerows(filas)
     return filas
@@ -150,7 +156,7 @@ def resumen_y_figura(filas):
           f" {m('dif_arm'):8.4f} | {m('psnr_tv_dir'):6.2f} {m('psnr_tv_disco'):8.2f}"
           f" {m('dif_tv'):7.4f} | {m('t_mapeo'):5.1f}s {1e3 * m('t_factorizacion'):5.1f}ms |"
           f" {m('t_dato_conf') / m('t_dato_dir'):13.1f} | {sin:>6d} de {tot:<6d}")
-    with open(os.path.join(SALIDA, "banco_resumen.txt"), "w") as f:
+    with open(os.path.join(SALIDA, "banco_resumen.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(lineas) + "\n")
 
     # figura de las rayas en función de L

@@ -29,8 +29,14 @@ def fila(r):
 
 
 def main():
-    with open(os.path.join(SALIDA, "banco.csv"), encoding="utf-8") as f:
-        filas = list(csv.DictReader(f))
+    ruta = os.path.join(SALIDA, "banco.csv")
+    try:
+        with open(ruta, encoding="utf-8") as f:
+            filas = list(csv.DictReader(f))
+    except UnicodeDecodeError:
+        # banco.csv escrito en Windows con la codificación del sistema
+        with open(ruta, encoding="cp1252") as f:
+            filas = list(csv.DictReader(f))
     imagenes = list(dict.fromkeys(r["imagen"] for r in filas))
     partes = []
     for img in imagenes:
